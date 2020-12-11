@@ -3,13 +3,16 @@ import "./App.css";
 import React, { useState } from "react";
 import data from "./data";
 import List from "./List";
+import { Container } from "react-bootstrap";
 
 function App() {
   const [contact, setContact] = useState(data);
   return (
     <div className="App">
-      <h3>You have {contact.length} contacts</h3>
-      <List />
+      <Container>
+        <h3>You have {contact.length} contacts</h3>
+        <List contact={contact} />
+      </Container>
     </div>
   );
 }
