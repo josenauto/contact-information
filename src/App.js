@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <Container>
         <h3>You have {contact.length} contacts</h3>
+        <button onClick={() => setContact([])}>Delete contacts</button>
         <List contact={contact} />
       </Container>
     </div>
